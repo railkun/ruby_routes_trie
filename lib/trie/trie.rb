@@ -22,7 +22,7 @@ module RubyRoutesTrie
 
     def find(route)
       find_route(route) do |found, base|
-        raise RouteNotExist unless found && base.route.empty? == false
+        raise RouteNotExist if !found || base.route.empty?
       end
     end
 

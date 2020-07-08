@@ -1,8 +1,11 @@
 require_relative 'trie/trie'
 
 module RubyRoutesTrie
-  def self.add_route(method, route)
+  def self.new
     @trie = Trie.new
+  end
+
+  def self.add_route(method, route)
     @trie.add_route(method, route)
   end
 
